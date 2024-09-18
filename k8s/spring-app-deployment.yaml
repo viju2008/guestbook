@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-argocd-app
-          image: viju2008/my-app-image:main-53ad77dcd7f68575f2df06e0b4aff9b8709708e5
+          image: viju2008/my-app-image:main-6778a2e82b55e9de64018c47cdcbd40a96824612
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
