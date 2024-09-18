@@ -29,7 +29,7 @@ jobs:
 
       - name: Push Docker image to Docker Hub
         run: |
-          echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login --username viju2008 --password-stdin
+          echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login --username viju2008 --password-stdin
           docker push viju2008/my-app-image:$GITHUB_REF_NAME-$GITHUB_SHA
 
       - name: Update manifest file
