@@ -11,6 +11,10 @@ spec:
       targetPort: 8080
       nodePort: 30012
   type: NodePort
+  template:
+    spec:
+      containers:
+        - image: viju2008/my-app-image:main-8cc7702ed0ec4cce60676d8461438416cfbef0f6
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -28,7 +32,7 @@ spec:
     spec:
       containers:
         - name: spring-argocd-app
-          image: viju2008/spring-app
+          image: viju2008/my-app-image:main-8cc7702ed0ec4cce60676d8461438416cfbef0f6
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
